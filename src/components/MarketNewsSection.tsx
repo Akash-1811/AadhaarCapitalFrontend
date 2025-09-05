@@ -184,15 +184,7 @@ const MarketNewsSection = () => {
                 <span className="text-xs text-gray-500">Previous Close</span>
                 <span className="text-xs">{formatPrice(index.previous_close!)}</span>
               </div>
-              <div className="text-center pt-2">
-                <Badge variant="outline" className={`text-xs ${
-                  index.status === "live_data"
-                    ? "text-green-600 border-green-200 bg-green-50"
-                    : "text-blue-600 border-blue-200 bg-blue-50"
-                }`}>
-                  {index.status === "live_data" ? "Live Data" : "Historical Data"}
-                </Badge>
-              </div>
+
             </div>
           ) : (
             <div className="text-center">
