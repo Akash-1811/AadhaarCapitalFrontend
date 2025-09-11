@@ -66,11 +66,17 @@ const SipCalculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-secondary">
+    <div className="min-h-screen bg-gradient-secondary relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-primary rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
+      </div>
+
       <Header />
-      
-      <main className="pt-2">
-        <div className="max-w-7xl mx-auto px-4 py-2">
+
+      <main className="pt-2 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           {/* Header */}
           <div className="mb-3">
             <div className="flex items-center justify-between mb-1">
@@ -97,7 +103,7 @@ const SipCalculator = () => {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-6 px-2">
             {/* Left Side - Calculator Controls */}
             <Card className="bg-white/90 backdrop-blur-sm shadow-glow border-white/20">
               <CardHeader className="pb-3">

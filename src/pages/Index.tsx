@@ -14,12 +14,12 @@ const Index = () => {
   const homePageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Aadhar Capital - Home",
+    "name": "Aadhaar Capital - Home",
     "description": "India's leading digital investment and insurance platform offering SIP investments, mutual funds, health insurance, term insurance, motor insurance, and comprehensive financial planning services.",
-    "url": "https://aadharcapital.com/",
+    "url": "https://Aadhaarcapital.com/",
     "mainEntity": {
       "@type": "FinancialService",
-      "name": "Aadhar Capital",
+      "name": "Aadhaar Capital",
       "serviceType": ["Investment Services", "Insurance Services", "Financial Planning"]
     },
     "breadcrumb": {
@@ -29,7 +29,7 @@ const Index = () => {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://aadharcapital.com/"
+          "item": "https://Aadhaarcapital.com/"
         }
       ]
     }
@@ -38,10 +38,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Aadhar Capital - India's Leading Digital Investment & Insurance Platform | SIP, Mutual Funds, Health Insurance"
-        description="Transform your financial future with Aadhar Capital. Expert SIP investments, comprehensive insurance solutions, and personalized financial planning. Start your wealth creation journey today!"
-        keywords="Aadhar Capital, SIP investment, mutual funds India, health insurance, term insurance, motor insurance, financial planning, retirement planning, wealth management, digital investment platform, portfolio management, insurance comparison, investment advisory, financial services India"
-        url="https://aadharcapital.com/"
+        title="Aadhaar Capital - India's Leading Digital Investment & Insurance Platform | SIP, Mutual Funds, Health Insurance"
+        description="Transform your financial future with Aadhaar Capital. Expert SIP investments, comprehensive insurance solutions, and personalized financial planning. Start your wealth creation journey today!"
+        keywords="Aadhaar Capital, SIP investment, mutual funds India, health insurance, term insurance, motor insurance, financial planning, retirement planning, wealth management, digital investment platform, portfolio management, insurance comparison, investment advisory, financial services India"
+        url="https://Aadhaarcapital.com/"
         schemaData={homePageSchema}
       />
       <Header />

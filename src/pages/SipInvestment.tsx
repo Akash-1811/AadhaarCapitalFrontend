@@ -122,7 +122,7 @@ const SipInvestment = () => {
     "description": "Systematic Investment Plan (SIP) services for mutual fund investments with expert guidance and portfolio management.",
     "provider": {
       "@type": "FinancialService",
-      "name": "Aadhar Capital"
+      "name": "Aadhaar Capital"
     },
     "serviceType": "Investment Advisory",
     "areaServed": "India",
@@ -133,31 +133,41 @@ const SipInvestment = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-secondary">
+    <div className="min-h-screen bg-gradient-secondary relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-primary rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
+      </div>
+
       <SEO
         title="SIP Investment - Systematic Investment Plan Services"
-        description="Start your SIP investment journey with Aadhar Capital. Expert guidance on systematic investment plans, mutual fund selection, and goal-based investing. Build wealth systematically with professional portfolio management."
+        description="Start your SIP investment journey with Aadhaar Capital. Expert guidance on systematic investment plans, mutual fund selection, and goal-based investing. Build wealth systematically with professional portfolio management."
         keywords="SIP investment, systematic investment plan, mutual funds SIP, SIP calculator, investment planning, wealth creation, portfolio management, mutual fund investment, SIP benefits, goal based investing"
-        url="https://aadharcapital.com/sip-investment"
+        url="https://Aadhaarcapital.com/sip-investment"
         schemaData={sipPageSchema}
       />
       <Header />
-      
-      <main className="pt-4">
+
+      <main className="pt-4 relative">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Left Content */}
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium">
+              <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium">
                 <TrendingUp className="w-4 h-4" />
                 SIP INVESTMENT
               </div>
               
               <div className="space-y-3">
-                <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
+                <h1 className="page-title">
                   Start your SIP journey with
                   <span className="bg-gradient-primary bg-clip-text text-transparent"> smart investing</span>
                 </h1>
+                <p className="page-subtitle">
+                  Build wealth systematically with our expert-guided SIP investment plans.
+                  Start with as little as ₹500/month and watch your money grow through the power of compounding.
+                </p>
               </div>
 
               {/* Benefits */}
@@ -380,8 +390,8 @@ const SipInvestment = () => {
         <div className="max-w-7xl mx-auto px-4 py-16">
           {/* Why SIP Investment Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Why SIP is the Smart Way to Invest</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-section mb-6">Why SIP is the Smart Way to Invest</h2>
+            <p className="body-lead max-w-3xl mx-auto">
               Start small, dream big. SIP helps you build wealth systematically with the power of compounding
             </p>
           </div>
@@ -440,13 +450,13 @@ const SipInvestment = () => {
           </div>
 
           {/* Blog Section */}
-          <div className="bg-gray-50 py-16 rounded-lg">
+          <div className="bg-gray-50 py-16 px-8 rounded-lg">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">SIP Investment Insights</h2>
               <p className="text-xl text-gray-600">Expert guidance for successful SIP investing</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Blog Post 1 */}
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://aadharcapital.com/sitemap.xml
+Sitemap: https://Aadhaarcapital.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -39,4 +39,4 @@ User-agent: WhatsApp
 Allow: /
 
 # Host directive
-Host: https://aadharcapital.com
+Host: https://AadhaarCapital.com

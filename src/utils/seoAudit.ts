@@ -1,4 +1,4 @@
-// SEO Audit Utility for Aadhar Capital
+// SEO Audit Utility for Aadhaar Capital
 export interface SEOAuditResult {
   score: number;
   issues: string[];
@@ -167,7 +167,7 @@ export const performSEOAudit = (): SEOAuditResult => {
 export const monitorSEO = () => {
   const audit = performSEOAudit();
   
-  console.group('🔍 Aadhar Capital SEO Audit');
+  console.group('🔍 Aadhaar Capital SEO Audit');
   console.log(`📊 SEO Score: ${audit.score}/100`);
   
   if (audit.passed.length > 0) {

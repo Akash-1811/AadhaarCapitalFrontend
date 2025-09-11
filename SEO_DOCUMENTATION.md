@@ -1,4 +1,4 @@
-# Aadhar Capital - Comprehensive SEO Implementation
+# Aadhaar Capital - Comprehensive SEO Implementation
 
 ## 🚀 SEO Features Implemented
 
@@ -46,7 +46,7 @@ Each page has optimized:
 ## 🎯 Target Keywords
 
 ### Primary Keywords
-- Aadhar Capital
+- Aadhaar Capital
 - SIP investment India
 - Health insurance plans
 - Term insurance
@@ -92,7 +92,7 @@ import SEO from "@/components/SEO";
   title="Page Title"
   description="Page description"
   keywords="relevant, keywords, here"
-  url="https://aadharcapital.com/page"
+  url="https://Aadhaarcapital.com/page"
   schemaData={pageSchema}
 />
 ```
@@ -194,4 +194,4 @@ import SEO from "@/components/SEO";
 4. **Expert Content**: Professional financial guidance
 5. **Trust Signals**: Security and reliability focus
 
-This SEO implementation positions Aadhar Capital as a leading digital financial platform in India's competitive market.
+This SEO implementation positions Aadhaar Capital as a leading digital financial platform in India's competitive market.

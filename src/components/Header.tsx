@@ -34,15 +34,15 @@ const Header = () => {
   return (
     <header className="w-full bg-white/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-gradient-primary text-white py-2 px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-3 md:gap-6">
+      <div className="bg-gradient-primary text-white py-2 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs sm:text-sm">
+          <div className="flex items-center gap-2 sm:gap-3 md:gap-6">
             <Dialog open={isBranchDialogOpen} onOpenChange={setIsBranchDialogOpen}>
               <DialogTrigger asChild>
-                <button className="flex items-center gap-2 hover:text-white/80 transition-colors cursor-pointer">
-                  <MapPin className="w-4 h-4" />
-                  <span className="hidden md:inline">Branch Locator</span>
-                  <span className="md:hidden">Branches</span>
+                <button className="flex items-center gap-1 sm:gap-2 hover:text-white/80 transition-colors cursor-pointer">
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">Branch Locator</span>
+                  <span className="sm:hidden text-xs">Branches</span>
                 </button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
@@ -92,7 +92,7 @@ const Header = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-gray-900">Business Hours</p>
-                        <p className="text-sm text-gray-600">Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        <p className="text-sm text-gray-600">Mon - Sun: 9:00 AM - 7:00 PM</p>
                       </div>
                     </div>
                   </div>
@@ -128,8 +128,8 @@ const Header = () => {
               </DialogContent>
             </Dialog>
 
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4" />
+            <div className="flex items-center gap-1 sm:gap-2">
+              <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
               <span className="text-xs sm:text-sm">+91 8369158069</span>
             </div>
           </div>
@@ -137,55 +137,55 @@ const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 sm:py-2">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity mr-4 lg:mr-6">
             <div className="flex-shrink-0">
                 <img
                   src={logoImage}
-                  alt="Aadhar Capital Logo"
-                  className="h-12 w-auto md:h-14 lg:h-16"
+                  alt="Aadhaar Capital Logo"
+                  className="h-8 w-auto sm:h-10 md:h-12 lg:h-14"
                 />
             </div>
-            <span className="text-2xl md:text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Aadhar Capital
+            <span className="heading-card !text-orange-600">
+              Aadhaar Capital
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             <Link
               to="/sip-calculator"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Start your SIP
             </Link>
             <Link
               to="/health-insurance"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Get Health Insurance
             </Link>
             <Link
               to="/term-insurance"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Get Term Insurance
             </Link>
             <Link
               to="/retirement-planning"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Retirement Planning
             </Link>
             <Link
               to="/financial-planning"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Financial Planning
             </Link>
             <Link
               to="/market-news"
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors whitespace-nowrap text-sm xl:text-base"
             >
               Market News
             </Link>
@@ -207,52 +207,52 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 sm:px-6 py-4 sm:py-6 space-y-3 sm:space-y-4">
               <Link
                 to="/sip-calculator"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Start your SIP
               </Link>
               <Link
                 to="/health-insurance"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Get Health Insurance
               </Link>
               <Link
                 to="/term-insurance"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Get Term Insurance
               </Link>
               <Link
                 to="/retirement-planning"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Retirement Planning
               </Link>
               <Link
                 to="/financial-planning"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Financial Planning
               </Link>
               <Link
                 to="/motor-insurance"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3 border-b border-gray-100"
                 onClick={closeMobileMenu}
               >
                 Motor Insurance
               </Link>
               <Link
                 to="/market-news"
-                className="block text-foreground hover:text-primary transition-colors py-2"
+                className="block body-text text-foreground hover:text-primary transition-colors py-3"
                 onClick={closeMobileMenu}
               >
                 Market News

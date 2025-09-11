@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import NotificationPopup from "./components/NotificationPopup";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HealthInsurance from "./pages/HealthInsurance";
@@ -16,6 +17,7 @@ import SipCalculator from "./pages/SipCalculator";
 import FinancialPlanning from "./pages/FinancialPlanning";
 import MotorInsurance from "./pages/MotorInsurance";
 import MarketNews from "./pages/MarketNews";
+import FontTest from "./pages/FontTest";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
         <Sonner />
         <ScrollToTop />
         <WhatsAppFloat />
+        <NotificationPopup />
         <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/health-insurance" element={<HealthInsurance />} />
@@ -37,6 +40,7 @@ const App = () => (
         <Route path="/financial-planning" element={<FinancialPlanning />} />
         <Route path="/motor-insurance" element={<MotorInsurance />} />
         <Route path="/market-news" element={<MarketNews />} />
+        <Route path="/font-test" element={<FontTest />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

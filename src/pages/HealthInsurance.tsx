@@ -108,12 +108,18 @@ const HealthInsurance = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-secondary">
+    <div className="min-h-screen bg-gradient-secondary relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-primary rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-20 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
+      </div>
+
       <Header />
-      
-      <main className="pt-4">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+
+      <main className="pt-4 relative">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="grid lg:grid-cols-2 gap-8 items-start px-4 sm:px-6 lg:px-8">
             {/* Left Content */}
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium">
@@ -122,7 +128,7 @@ const HealthInsurance = () => {
               </div>
 
               <div className="space-y-3">
-                <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
+                <h1 className="page-title">
                   Buy Health insurance plan in a few simple
                   <span className="bg-gradient-primary bg-clip-text text-transparent"> steps</span>
                 </h1>
@@ -345,17 +351,17 @@ const HealthInsurance = () => {
         </div>
 
         {/* Comprehensive Health Insurance Content */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Why Health Insurance Section */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Why Health Insurance is Essential</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="heading-section mb-6">Why Health Insurance is Essential</h2>
+            <p className="body-lead max-w-3xl mx-auto">
               Protect your family's health and wealth with comprehensive health insurance coverage
             </p>
           </div>
 
           {/* Statistics Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 px-4 sm:px-6 lg:px-8">
             <div className="text-center p-6 bg-white rounded-lg shadow-lg">
               <div className="text-3xl font-bold text-primary mb-2">₹5 Lakh</div>
               <div className="text-gray-600">Average hospitalization cost</div>
@@ -384,8 +390,8 @@ const HealthInsurance = () => {
               />
             </div>
             <div>
-              <h3 className="text-3xl font-bold mb-6">Your Health, Our Priority</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="heading-section mb-6">Your Health, Our Priority</h3>
+              <p className="body-main mb-6">
                 Medical emergencies can strike anytime and drain your savings. Health insurance
                 provides financial protection against rising healthcare costs and ensures you
                 get the best treatment without worrying about expenses.
@@ -410,8 +416,8 @@ const HealthInsurance = () => {
           {/* Blog Section */}
           <div className="bg-gray-50 py-16 rounded-lg">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">Health Insurance Insights</h2>
-              <p className="text-xl text-gray-600">Expert advice for choosing the right health coverage</p>
+              <h2 className="heading-section mb-4">Health Insurance Insights</h2>
+              <p className="body-lead">Expert advice for choosing the right health coverage</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

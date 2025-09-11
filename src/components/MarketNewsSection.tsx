@@ -301,7 +301,7 @@ const MarketNewsSection = () => {
   if (loading) {
     return (
       <section className="py-16 bg-gradient-secondary">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <RefreshCw className="w-8 h-8 animate-spin mx-auto mb-4 text-primary" />
             <p className="text-lg">Loading market data...</p>
@@ -314,7 +314,7 @@ const MarketNewsSection = () => {
   if (error) {
     return (
       <section className="py-16 bg-gradient-secondary">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
             <div className="bg-red-50 border border-red-200 rounded-lg p-6 max-w-md mx-auto">
               <p className="text-red-600 mb-4">{error}</p>
@@ -331,7 +331,7 @@ const MarketNewsSection = () => {
 
   return (
     <section className="py-6 bg-gradient-secondary">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-2">
@@ -366,7 +366,7 @@ const MarketNewsSection = () => {
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">Indian Market Indices</h3>
                 <p className="text-sm text-gray-600">Live tracking of major Indian stock market indices</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-2">
                 <IndexCard index={marketData.indian_indices?.nifty || { symbol: "^NSEI", name: "Nifty", current_price: null, previous_close: null, change: null, change_percent: null, volume: null, status: "no_data" }} />
                 <IndexCard index={marketData.indian_indices?.sensex || { symbol: "^BSESN", name: "Sensex", current_price: null, previous_close: null, change: null, change_percent: null, volume: null, status: "no_data" }} />
                 <IndexCard index={marketData.indian_indices?.banknifty || { symbol: "^NSEBANK", name: "Bank Nifty", current_price: null, previous_close: null, change: null, change_percent: null, volume: null, status: "no_data" }} />
@@ -377,10 +377,10 @@ const MarketNewsSection = () => {
             {/* Market Data Cards - All 4 Together */}
             <div className="space-y-4">
               <div className="text-center">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">Top Gainers & Losers</h3>
-                <p className="text-sm text-gray-600">Real-time tracking of best and worst performing stocks</p>
+                <h3 className="heading-card mb-2">Top Gainers & Losers</h3>
+                <p className="body-secondary">Real-time tracking of best and worst performing stocks</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-2">
                 <MarketCard
                   data={marketData.top5_gainers_global}
                   title="Top 5 Global Gainers"
@@ -409,7 +409,7 @@ const MarketNewsSection = () => {
             </div>
 
             {/* News Section */}
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-8 px-2">
               <NewsCard
                 news={marketData.global_news}
                 title="Global Market News"

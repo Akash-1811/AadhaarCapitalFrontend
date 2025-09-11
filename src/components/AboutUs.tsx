@@ -12,6 +12,7 @@ import {
   Target,
   Lightbulb
 } from "lucide-react";
+import { scrollToEnquiryForm } from "@/utils/scrollToForm";
 
 const AboutUs = () => {
   const features = [
@@ -33,9 +34,9 @@ const AboutUs = () => {
   ];
 
   const stats = [
-    { number: "10,000+", label: "Happy Clients", icon: Users },
-    { number: "₹500Cr+", label: "Assets Under Management", icon: TrendingUp },
-    { number: "15+", label: "Years Experience", icon: Award },
+    { number: "2,000+", label: "Happy Clients", icon: Users },
+    { number: "₹100Cr+", label: "Assets Under Management", icon: TrendingUp },
+    { number: "50+", label: "Digital Branches", icon: Award },
     { number: "99.8%", label: "Client Satisfaction", icon: Heart }
   ];
 
@@ -47,8 +48,8 @@ const AboutUs = () => {
         <div className="absolute bottom-10 right-20 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-16 items-center px-2">
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -57,19 +58,19 @@ const AboutUs = () => {
                 About Us
               </div>
               
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="heading-section">
                 <span className="bg-gradient-primary bg-clip-text text-transparent">Simplifying Wealth.</span>
                 <br />
                 Securing Futures
               </h2>
               
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Aadhaar Capital is a modern Indian financial solutions platform dedicated to helping individuals 
+              <div className="space-y-4">
+                <p className="body-lead">
+                  Aadhaar Capital is a modern Indian financial solutions platform dedicated to helping individuals
                   and families plan, grow, and protect their wealth.
                 </p>
-                <p>
-                  We offer goal-based financial services that make smart money decisions accessible to everyone, 
+                <p className="body-lead">
+                  We offer goal-based financial services that make smart money decisions accessible to everyone,
                   from working professionals to growing families.
                 </p>
               </div>
@@ -87,8 +88,8 @@ const AboutUs = () => {
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{feature.title}</h4>
-                        <p className="text-muted-foreground text-sm">{feature.description}</p>
+                        <h4 className="heading-sub mb-1">{feature.title}</h4>
+                        <p className="body-secondary">{feature.description}</p>
                       </div>
                     </div>
                   );
@@ -98,7 +99,7 @@ const AboutUs = () => {
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="gradient" size="lg">
+              <Button variant="gradient" size="lg" onClick={scrollToEnquiryForm}>
                 Start Your Journey
                 <ArrowRight className="w-5 h-5" />
               </Button>
@@ -125,7 +126,7 @@ const AboutUs = () => {
             </Card>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 px-1">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (

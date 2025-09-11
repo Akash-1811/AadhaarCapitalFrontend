@@ -13,28 +13,34 @@ import {
   PiggyBank,
   CreditCard
 } from "lucide-react";
+import { scrollToEnquiryForm } from "@/utils/scrollToForm";
+import { Link } from "react-router-dom";
 
 const ServicesSection = () => {
   const wantToServices = [
     {
       icon: <PiggyBank className="w-5 h-5" />,
       title: "Plan my Retirement",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/retirement-planning"
     },
     {
       icon: <Shield className="w-5 h-5" />,
       title: "Avail Insurance",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/term-insurance"
     },
     {
       icon: <Users className="w-5 h-5" />,
       title: "Invest in Mutual Funds",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/sip-investment"
     },
     {
       icon: <BarChart3 className="w-5 h-5" />,
       title: "Invest in NPS",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/retirement-planning"
     }
   ];
 
@@ -42,29 +48,33 @@ const ServicesSection = () => {
     {
       icon: <Smartphone className="w-5 h-5" />,
       title: "Risk Profiling for my investment needs",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/financial-planning"
     },
     {
       icon: <Briefcase className="w-5 h-5" />,
       title: "Tax Saving Solutions",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/financial-planning"
     },
     {
       icon: <FileText className="w-5 h-5" />,
       title: "Financial assessment of portfolio",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/financial-planning"
     },
     {
       icon: <CreditCard className="w-5 h-5" />,
       title: "Planning my Retirement",
-      color: "text-gray-700"
+      color: "text-gray-700",
+      path: "/retirement-planning"
     }
   ];
 
   return (
     <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16 px-2">
           {/* I want to... */}
           <Card className="bg-white shadow-lg border border-gray-200 rounded-lg overflow-hidden">
             <CardHeader className="bg-gray-50 border-b border-gray-200 py-4 px-6">
@@ -75,15 +85,17 @@ const ServicesSection = () => {
             </CardHeader>
             <CardContent className="p-0">
               {wantToServices.map((service, index) => (
-                <div key={index} className="flex items-center justify-between px-6 py-4 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors cursor-pointer group">
-                  <div className="flex items-center gap-3">
-                    <div className={`${service.color}`}>
-                      {service.icon}
+                <Link key={index} to={service.path} className="block">
+                  <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors cursor-pointer group">
+                    <div className="flex items-center gap-3">
+                      <div className={`${service.color}`}>
+                        {service.icon}
+                      </div>
+                      <span className="text-sm font-medium text-gray-700">{service.title}</span>
                     </div>
-                    <span className="text-sm font-medium text-gray-700">{service.title}</span>
+                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </div>
+                </Link>
               ))}
               <div className="flex justify-center py-3 border-t border-gray-100">
                 <button className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -103,15 +115,17 @@ const ServicesSection = () => {
             </CardHeader>
             <CardContent className="p-0">
               {searchingServices.map((service, index) => (
-                <div key={index} className="flex items-center justify-between px-6 py-4 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors cursor-pointer group">
-                  <div className="flex items-center gap-3">
-                    <div className={`${service.color}`}>
-                      {service.icon}
+                <Link key={index} to={service.path} className="block">
+                  <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors cursor-pointer group">
+                    <div className="flex items-center gap-3">
+                      <div className={`${service.color}`}>
+                        {service.icon}
+                      </div>
+                      <span className="text-sm font-medium text-gray-700">{service.title}</span>
                     </div>
-                    <span className="text-sm font-medium text-gray-700">{service.title}</span>
+                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 transition-colors" />
-                </div>
+                </Link>
               ))}
               <div className="flex justify-center py-3 border-t border-gray-100">
                 <button className="text-gray-400 hover:text-gray-600 transition-colors">
@@ -155,7 +169,7 @@ const ServicesSection = () => {
                   deserve. With our proven methodologies and market expertise, let us guide you
                   towards achieving your financial goals."
                 </p>
-                <Button variant="hero">
+                <Button variant="hero" onClick={scrollToEnquiryForm}>
                   Connect Now
                   <ArrowRight className="w-4 h-4" />
                 </Button>

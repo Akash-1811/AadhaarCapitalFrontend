@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Smartphone, Download, Star } from "lucide-react";
+import { scrollToEnquiryForm } from "@/utils/scrollToForm";
 import appMockup from "@/assets/app-mockup.jpg";
 
 const AppDownloadSection = () => {
@@ -28,7 +29,7 @@ const AppDownloadSection = () => {
                 </h2>
 
                 <p className="text-xl opacity-90">
-                  #StayAhead with Aadhar Capital
+                  #StayAhead with Aadhaar Capital
                 </p>
 
                 <p className="text-lg opacity-80">
@@ -41,16 +42,16 @@ const AppDownloadSection = () => {
               {/* Service Features */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                  <div className="text-2xl font-bold">10K+</div>
+                  <div className="text-2xl font-bold">2K+</div>
                   <div className="text-sm opacity-80">Happy Clients</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                  <div className="text-2xl font-bold">₹500Cr+</div>
+                  <div className="text-2xl font-bold">₹100Cr+</div>
                   <div className="text-sm opacity-80">Assets Managed</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
-                  <div className="text-2xl font-bold">15+</div>
-                  <div className="text-sm opacity-80">Years Experience</div>
+                  <div className="text-2xl font-bold">50+</div>
+                  <div className="text-sm opacity-80">Digital Branches</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
                   <div className="text-2xl font-bold">99.8%</div>
@@ -78,6 +79,7 @@ const AppDownloadSection = () => {
                   variant="secondary"
                   size="lg"
                   className="bg-black text-white hover:bg-black/80 min-w-48"
+                  onClick={scrollToEnquiryForm}
                 >
                   <div className="flex items-center gap-3">
                     <Download className="w-6 h-6" />
@@ -95,7 +97,7 @@ const AppDownloadSection = () => {
               <div className="relative">
                 <img 
                   src={appMockup} 
-                  alt="Aadhar Capital mobile app interface showing portfolio dashboard and trading features"
+                  alt="Aadhaar Capital mobile app interface showing portfolio dashboard and trading features"
                   className="w-80 h-auto drop-shadow-2xl"
                 />
                 

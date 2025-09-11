@@ -1,27 +1,22 @@
 const StatsSection = () => {
   const stats = [
     {
-      number: "15+",
-      label: "Years",
-      sublabel: "of Innovation"
-    },
-    {
-      number: "₹75000+",
+      number: "₹100+",
       label: "Cr",
       sublabel: "Assets under Management"
     },
     {
-      number: "2M+",
+      number: "2K+",
       label: "Active",
       sublabel: "Investors"
     },
     {
-      number: "500+",
+      number: "50+",
       label: "Digital",
       sublabel: "Branches across 200 cities"
     },
     {
-      number: "10000+",
+      number: "200+",
       label: "Expert",
       sublabel: "Financial Advisors"
     }
@@ -29,8 +24,8 @@ const StatsSection = () => {
 
   return (
     <section className="py-16 bg-gradient-primary">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-2">
           {stats.map((stat, index) => (
             <div key={index} className="text-center text-white">
               <div className="text-3xl lg:text-4xl font-bold mb-2">

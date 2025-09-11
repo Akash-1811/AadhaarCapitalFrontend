@@ -42,7 +42,7 @@ export default {
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					foreground: 'hsl(var(--muted-foreground));'
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
@@ -77,7 +77,26 @@ export default {
 				'elegant': 'var(--shadow-elegant)',
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Open Sans', 'system-ui', 'sans-serif'],
+				heading: ['Playfair Display', 'serif'],
+				body: ['Open Sans', 'system-ui', 'sans-serif'],
+			},
+			fontSize: {
+				// Content/Body text sizes
+				'body-xs': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.025em' }],
+				'body-sm': ['0.875rem', { lineHeight: '1.6', letterSpacing: '0.025em' }],
+				'body-base': ['1rem', { lineHeight: '1.7', letterSpacing: '0.025em' }],
+				'body-lg': ['1.125rem', { lineHeight: '1.7', letterSpacing: '0.025em' }],
+
+				// Heading text sizes
+				'heading-xs': ['0.875rem', { lineHeight: '1.3', letterSpacing: '0.05em', fontWeight: '600' }],
+				'heading-sm': ['1rem', { lineHeight: '1.4', letterSpacing: '0.05em', fontWeight: '600' }],
+				'heading-base': ['1.25rem', { lineHeight: '1.4', letterSpacing: '0.05em', fontWeight: '600' }],
+				'heading-lg': ['1.5rem', { lineHeight: '1.3', letterSpacing: '0.05em', fontWeight: '700' }],
+				'heading-xl': ['2rem', { lineHeight: '1.2', letterSpacing: '0.05em', fontWeight: '700' }],
+				'heading-2xl': ['2.5rem', { lineHeight: '1.1', letterSpacing: '0.05em', fontWeight: '800' }],
+				'heading-3xl': ['3rem', { lineHeight: '1.1', letterSpacing: '0.05em', fontWeight: '800' }],
+				'heading-4xl': ['4rem', { lineHeight: '1', letterSpacing: '0.05em', fontWeight: '900' }],
 			},
 			scrollbar: {
 				thin: '6px',

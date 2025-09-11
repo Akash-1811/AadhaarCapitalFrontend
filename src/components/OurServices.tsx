@@ -11,6 +11,7 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { scrollToEnquiryForm } from "@/utils/scrollToForm";
 
 const OurServices = () => {
   const services = [
@@ -72,14 +73,14 @@ const OurServices = () => {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-hero rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4">
+      <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Shield className="w-4 h-4" />
             Our Services
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="heading-section mb-6">
             Comprehensive Financial Solutions
             <span className="bg-gradient-primary bg-clip-text text-transparent"> for Your Future</span>
           </h2>
@@ -90,7 +91,7 @@ const OurServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 px-4 sm:px-6 lg:px-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -132,12 +133,12 @@ const OurServices = () => {
 
         {/* CTA Section */}
         <div className="text-center bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-elegant border border-white/20">
-          <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Financial Future?</h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <h3 className="heading-card mb-4">Ready to Secure Your Financial Future?</h3>
+          <p className="body-main mb-6 max-w-2xl mx-auto">
             Get personalized financial advice from our expert team. Start your journey towards financial freedom today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="gradient" size="lg">
+            <Button variant="gradient" size="lg" onClick={scrollToEnquiryForm}>
               Get Free Consultation
               <ArrowRight className="w-5 h-5" />
             </Button>

@@ -44,9 +44,9 @@ const productOptions = [
 const carouselData = [
   {
     id: 1,
-    title: "Build wealth with",
+    title: "Secure your family with the rising cost of medical expences with our",
     highlight: "Health Insurance",
-    subtitle: "protection",
+    subtitle: "planning",
     description: "Secure your family's future with comprehensive health coverage. Get personalized insurance plans, instant claim processing, and 24/7 medical support all in one place.",
     icon: Heart,
     color: "text-red-500",
@@ -66,7 +66,7 @@ const carouselData = [
   },
   {
     id: 3,
-    title: "Build wealth with",
+    title: "Build worry-free golden years with",
     highlight: "Retirement Planning",
     subtitle: "strategies",
     description: "Plan your golden years with confidence. Get personalized retirement solutions, pension planning, and long-term wealth accumulation strategies for a secure future.",
@@ -77,7 +77,7 @@ const carouselData = [
   },
   {
     id: 4,
-    title: "Build wealth with",
+    title: "Build your financial road map for life with our comprehensive",
     highlight: "Financial Planning",
     subtitle: "expertise",
     description: "Achieve your financial goals with comprehensive planning services. Get expert advice on investments, tax planning, and wealth management strategies.",
@@ -257,12 +257,12 @@ const HeroSection = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-hero rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Left Content - Text and Trust Indicators */}
           <div className="space-y-6">
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4">
                 <div className={`p-3 rounded-full bg-gradient-to-r ${currentData.bgGradient}`}>
                   <IconComponent className={`w-8 h-8 ${currentData.color}`} />
                 </div>
@@ -279,14 +279,14 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+              <h1 className="heading-section">
                 {currentData.title}{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   {currentData.highlight}
                 </span>{" "}
                 {currentData.subtitle}
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="body-lead max-w-2xl">
                 {currentData.description}
               </p>
             </div>
@@ -320,15 +320,15 @@ const HeroSection = () => {
 
             {/* Additional Features */}
             <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl shadow-elegant border border-white/20">
-              <h4 className="font-semibold mb-4 text-center">Why Choose Aadhar Capital?</h4>
-              <div className="grid grid-cols-2 gap-4">
+              <h4 className="heading-sub mb-4 text-center">Why Choose Aadhaar Capital?</h4>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">10K+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  <div className="heading-card text-primary">2K+</div>
+                  <div className="body-secondary">Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">₹500Cr+</div>
-                  <div className="text-sm text-muted-foreground">Assets Managed</div>
+                  <div className="heading-card text-primary">₹100Cr+</div>
+                  <div className="body-secondary">Assets Managed</div>
                 </div>
               </div>
             </div>
@@ -364,21 +364,21 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Image and Form */}
-          <div className="space-y-6">
+          <div className="space-y-6 mt-8 lg:mt-12">
             {/* Hero Image - Reduced size */}
             <div className="relative">
               <div className="relative z-10 transition-all duration-500">
                 <img
                   src={currentData.image}
                   alt={`${currentData.highlight} - Professional financial services`}
-                  className="w-full h-64 lg:h-72 object-cover rounded-3xl shadow-glow"
+                  className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-2xl sm:rounded-3xl shadow-glow"
                 />
               </div>
             </div>
 
             {/* CTA Form - Below the image */}
-            <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-elegant border border-white/20">
-              <h3 className="text-lg font-semibold mb-4">
+            <div id="enquiry-form" className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-elegant border border-white/20">
+              <h3 className="heading-card mb-4">
                 Start your Wealth Creation Journey with
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">

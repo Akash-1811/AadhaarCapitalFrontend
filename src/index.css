@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,6 +16,22 @@ button:focus {
 /* Remove default browser focus styles */
 *:focus {
   outline: none !important;
+}
+
+/* Notification popup animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
 }
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
@@ -179,5 +197,183 @@ All colors MUST be HSL.
 
   .scrollbar-track-gray-100::-webkit-scrollbar-track {
     background: #f3f4f6;
+  }
+}
+
+/* Typography Utility Classes */
+@layer components {
+  /* Heading Styles - Using Playfair Display (Elegant Serif) */
+  .heading-display {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.02em !important;
+    color: #111827 !important;
+    font-style: normal !important;
+  }
+
+  .heading-hero {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    color: #111827 !important;
+    font-style: normal !important;
+  }
+
+  .heading-section {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 2.7rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    color: #111827 !important;
+    font-style: normal !important;
+  }
+
+    .heading-section h3 {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 1.7rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    color: #111827 !important;
+    font-style: normal !important;
+  }
+
+  .heading-card {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 1.625rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    color: #1f2937 !important;
+    font-style: normal !important;
+    white-space: nowrap !important;
+  }
+
+  .heading-sub {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+    color: #374151 !important;
+    font-style: normal !important;
+  }
+
+  .heading-small {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.025em !important;
+    color: #374151 !important;
+    font-style: normal !important;
+  }
+
+  /* Body Text Styles - Using Open Sans (Clean Sans-Serif) */
+  .body-lead {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 1.10rem !important;
+    font-weight: 400 !important;
+    /* line-height: 1.7 !important; */
+    letter-spacing: 0.01em !important;
+    color: hsl(var(--muted-foreground));
+    font-style: normal !important;
+  }
+
+  .body-main {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.01em !important;
+    color: hsl(var(--muted-foreground));
+    font-style: normal !important;
+  }
+
+  .body-secondary {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.01em !important;
+    color: #6b7280 !important;
+    font-style: normal !important;
+  }
+
+  .body-caption {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 0.75rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.025em !important;
+    color: #6b7280 !important;
+    font-style: normal !important;
+  }
+
+  /* Page-specific heading styles */
+  .page-title {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    color: #111827 !important;
+    margin-bottom: 1rem !important;
+    font-style: normal !important;
+  }
+
+  .page-subtitle {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    letter-spacing: 0.01em !important;
+    color: hsl(var(--muted-foreground));
+    margin-bottom: 2rem !important;
+    font-style: normal !important;
+  }
+
+  /* Card content styles */
+  .card-title {
+    /* font-family: 'Playfair Display', serif !important; */
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0 !important;
+    color: #1f2937 !important;
+    margin-bottom: 0.5rem !important;
+    font-style: normal !important;
+  }
+
+  .card-description {
+    /* font-family: 'Open Sans', sans-serif !important; */
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0.01em !important;
+    color: hsl(var(--muted-foreground));
+    font-style: normal !important;
+  }
+
+  /* Page differentiation classes */
+  .page-hero-investment {
+    background: linear-gradient(to bottom right, #fff7ed, #fed7aa, #fdba74) !important;
+  }
+
+  .page-hero-insurance {
+    background: linear-gradient(to bottom right, #eff6ff, #dbeafe, #bfdbfe) !important;
+  }
+
+  .page-hero-planning {
+    background: linear-gradient(to bottom right, #fff7ed, #fed7aa, #fdba74) !important;
+  }
+
+  .page-hero-calculator {
+    background: linear-gradient(to bottom right, #fff7ed, #fed7aa, #fdba74) !important;
   }
 }
