@@ -112,20 +112,20 @@ const NotificationPopup: React.FC = () => {
   if (!currentNotification || !isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-[60] animate-slide-up">
-      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm sm:max-w-sm max-w-[280px]">
-        <div className="flex items-start gap-2 sm:gap-3">
+    <div className="fixed bottom-20 left-4 z-[45] animate-slide-up">
+      <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 max-w-[260px] sm:max-w-[280px]">
+        <div className="flex items-start gap-2">
           <div className="flex-shrink-0">
-            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-green-500" />
+            <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-xs font-medium text-green-600 uppercase tracking-wide">
                 Just Now
               </span>
             </div>
-            <p className="text-xs sm:text-sm text-gray-900 font-medium leading-tight">
+            <p className="text-xs text-gray-900 font-medium leading-tight">
               <span className="font-semibold text-primary">{currentNotification.name}</span> has booked an appointment for{' '}
               <span className="font-semibold text-primary">{currentNotification.service}</span> from{' '}
               <span className="font-semibold text-primary">{currentNotification.location}</span>
@@ -133,10 +133,10 @@ const NotificationPopup: React.FC = () => {
           </div>
           <button
             onClick={handleClose}
-            className="flex-shrink-0 p-1 rounded-full hover:bg-gray-100 transition-colors"
+            className="flex-shrink-0 p-0.5 rounded-full hover:bg-gray-100 transition-colors"
             aria-label="Close notification"
           >
-            <X className="w-4 h-4 text-gray-400" />
+            <X className="w-3 h-3 text-gray-400" />
           </button>
         </div>
       </div>
