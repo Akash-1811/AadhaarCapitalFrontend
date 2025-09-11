@@ -112,7 +112,7 @@ const NotificationPopup: React.FC = () => {
   if (!currentNotification || !isVisible) return null;
 
   return (
-    <div className="fixed bottom-20 left-4 z-[45] animate-slide-up">
+    <div className="fixed bottom-6 left-4 z-[45] animate-slide-up">
       <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 max-w-[260px] sm:max-w-[280px]">
         <div className="flex items-start gap-2">
           <div className="flex-shrink-0">
