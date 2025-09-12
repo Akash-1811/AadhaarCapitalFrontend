@@ -40,13 +40,9 @@ export default defineConfig(() => ({
     cssCodeSplit: true,
     sourcemap: false, // Disable sourcemaps in production for better performance
     target: 'es2015', // Better browser support while maintaining performance
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove ALL console.logs in production
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.warn', 'console.info', 'console.group', 'console.groupEnd'], // Remove specific console methods
-      },
+    minify: 'esbuild', // Use esbuild for faster builds (default)
+    esbuild: {
+      drop: ['console', 'debugger'], // Remove console.logs and debugger statements in production
     },
   },
   // Optimize dependencies
