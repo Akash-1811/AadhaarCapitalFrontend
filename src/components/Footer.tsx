@@ -20,10 +20,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-muted/30 pt-16 pb-8">
+    <footer className="bg-muted/30 pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-8 lg:mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-6 lg:mb-8">
           {/* Company Info */}
           <div className="space-y-4 lg:space-y-6">
             <div className="flex items-center gap-2">
@@ -98,19 +98,31 @@ const Footer = () => {
           </div>
         </div>
 
-        <Separator className="mb-8" />
+        <Separator className="mb-6 lg:mb-8" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 pt-6 lg:pt-8 border-t border-muted">
-          <div className="body-text-small text-muted-foreground text-center lg:text-left">
-            © 2024 Aadhaar Capital. All rights reserved. | Privacy Policy | Terms of Service
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-4 pt-4 lg:pt-6 border-t border-muted">
+          {/* Copyright and Legal Links */}
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-1 body-text-small text-muted-foreground text-center lg:text-left">
+            <span>© 2024 Aadhaar Capital. All rights reserved.</span>
+            <span className="hidden sm:inline">|</span>
+            <div className="flex items-center gap-1">
+              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <span>|</span>
+              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-end gap-4 lg:gap-6 body-text-small text-muted-foreground">
-            <span>SEBI Registered</span>
-            <span>•</span>
-            <span>ISO 27001 Certified</span>
-            <span>•</span>
+          {/* Certifications */}
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-2 sm:gap-4 lg:gap-6 body-text-small text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <span>SEBI Registered</span>
+              <span className="hidden sm:inline">•</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span>ISO 27001 Certified</span>
+              <span className="hidden sm:inline">•</span>
+            </div>
             <span>Bank Grade Security</span>
           </div>
         </div>

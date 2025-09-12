@@ -5,10 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aadhaar Capital - India's Leading Investment & Insurance Platform | SIP, Mutual Funds, Health Insurance</title>
 
-    <!-- Google Fonts - Preload for better performance -->
+    <!-- DNS prefetch and preconnect for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap&subset=latin" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap&subset=latin" rel="stylesheet"></noscript>
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/src/assets/financial3.jpg" fetchpriority="high">
+
+    <!-- Prefetch service worker -->
+    <link rel="prefetch" href="/sw.js">
+
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical styles for initial render */
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      #root { min-height: 100vh; }
+      .hero-loading {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e2e8f0;
+        border-top: 3px solid #ff6600;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      /* Prevent layout shift */
+      .hero-image-placeholder {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+    </style>
 
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -64,9 +109,9 @@
     <meta name="business:contact_data:region" content="India" />
     <meta name="business:contact_data:country_name" content="India" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Inter font - Optimized loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&subset=latin" rel="stylesheet"></noscript>
 
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />

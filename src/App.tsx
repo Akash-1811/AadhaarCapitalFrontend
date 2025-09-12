@@ -7,6 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import NotificationPopup from "./components/NotificationPopup";
+import PerformanceMonitor from "./components/PerformanceMonitor";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HealthInsurance from "./pages/HealthInsurance";
@@ -25,6 +26,7 @@ const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        {import.meta.env.DEV && <PerformanceMonitor />}
         <Toaster />
         <Sonner />
         <ScrollToTop />

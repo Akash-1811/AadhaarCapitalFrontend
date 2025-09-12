@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Smartphone, Download, Star } from "lucide-react";
 import { scrollToEnquiryForm } from "@/utils/scrollToForm";
+import OptimizedImage from "@/components/ui/optimized-image";
 import appMockup from "@/assets/app-mockup.jpg";
 
 const AppDownloadSection = () => {
@@ -95,10 +96,11 @@ const AppDownloadSection = () => {
             {/* Right Content - App Mockup */}
             <div className="relative flex justify-center">
               <div className="relative">
-                <img 
-                  src={appMockup} 
+                <OptimizedImage
+                  src={appMockup}
                   alt="Aadhaar Capital mobile app interface showing portfolio dashboard and trading features"
                   className="w-80 h-auto drop-shadow-2xl"
+                  lazy={true}
                 />
                 
                 {/* Floating elements */}

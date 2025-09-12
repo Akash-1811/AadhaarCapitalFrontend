@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calculator, TrendingUp, PieChart, ArrowLeft, BookOpen, Target, BarChart3 } from "lucide-react";
+import { Calculator, TrendingUp, PieChart, BookOpen, Target, BarChart3 } from "lucide-react";
 
 interface SipData {
   monthlyAmount: number;
@@ -244,7 +244,10 @@ const SipCalculator = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-3 text-lg font-semibold">
+                  <Button
+                    onClick={() => navigate('/sip-investment')}
+                    className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white py-3 text-lg font-semibold"
+                  >
                     INVEST NOW
                   </Button>
                 </CardContent>

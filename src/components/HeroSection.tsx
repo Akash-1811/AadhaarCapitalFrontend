@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, TrendingUp, Shield, Heart, PiggyBank, Calculator, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
+import OptimizedImage from "@/components/ui/optimized-image";
 import heroImage from "@/assets/financial3.jpg";
 
 
@@ -365,13 +366,16 @@ const HeroSection = () => {
 
           {/* Right Content - Image and Form */}
           <div className="space-y-6 mt-8 lg:mt-12">
-            {/* Hero Image - Reduced size */}
+            {/* Hero Image - Optimized */}
             <div className="relative">
               <div className="relative z-10 transition-all duration-500">
-                <img
+                <OptimizedImage
                   src={currentData.image}
                   alt={`${currentData.highlight} - Professional financial services`}
-                  className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-2xl sm:rounded-3xl shadow-glow"
+                  className="w-full h-48 sm:h-56 md:h-64 lg:h-72 rounded-2xl sm:rounded-3xl shadow-glow"
+                  priority={currentSlide === 0} // Only prioritize first slide
+                  lazy={currentSlide !== 0}
+                  fetchpriority={currentSlide === 0 ? "high" : "auto"}
                 />
               </div>
             </div>
