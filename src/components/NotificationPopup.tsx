@@ -51,8 +51,7 @@ const NotificationPopup: React.FC = () => {
             });
           }
         }
-        
-        console.log(`Loaded ${parsedData.length} notifications from Excel file`);
+
         setNotifications(parsedData);
       } catch (error) {
         console.error('Error loading Excel file:', error);
