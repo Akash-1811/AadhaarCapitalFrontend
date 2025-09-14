@@ -131,7 +131,7 @@ const Footer = () => {
           </div>
 
           {/* Right Side - Developer Credit */}
-          <div className="flex items-center justify-center lg:justify-end gap-2 body-text-small text-muted-foreground mb-2 sm:mb-0">
+          <div className="flex items-center justify-center lg:justify-end gap-2 body-text-small text-muted-foreground mb-2 sm:mb-0 pr-16 lg:pr-20">
             {/* Mobile: Shorter version */}
             <span className="block sm:hidden" style={{ marginLeft: '30px' }}>
               Designed & dev with ❤ by
