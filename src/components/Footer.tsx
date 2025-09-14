@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Youtube, 
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
   Linkedin,
   Phone,
-  Mail 
+  Mail,
+  Heart
 } from "lucide-react";
 import logoImage from "@/assets/logo_real.png";
 
@@ -20,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-muted/30 pt-12 sm:pt-16 pb-6 sm:pb-8">
+    <footer className="bg-muted/30 pt-12 sm:pt-16 pb-8 sm:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-6 lg:mb-8">
@@ -101,29 +102,90 @@ const Footer = () => {
         <Separator className="mb-6 lg:mb-8" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-4 pt-4 lg:pt-6 border-t border-muted">
-          {/* Copyright and Legal Links */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-1 body-text-small text-muted-foreground text-center lg:text-left">
-            <span>© 2024 Aadhaar Capital. All rights reserved.</span>
-            <span className="hidden sm:inline">|</span>
-            <div className="flex items-center gap-1">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <span>|</span>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 lg:gap-4 pt-4 lg:pt-6 border-t border-muted">
+          {/* Left Side - Copyright, Legal Links & Certifications */}
+          <div className="flex flex-col gap-3 text-center lg:text-left">
+            {/* Copyright and Legal Links */}
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-2 sm:gap-1 body-text-small text-muted-foreground">
+              <span>© 2024 Aadhaar Capital. All rights reserved.</span>
+              <span className="hidden sm:inline">|</span>
+              <div className="flex items-center gap-1">
+                <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+                <span>|</span>
+                <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-2 sm:gap-4 body-text-small text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <span>SEBI Registered</span>
+                <span className="hidden sm:inline">•</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span>ISO 27001 Certified</span>
+                <span className="hidden sm:inline">•</span>
+              </div>
+              <span>Bank Grade Security</span>
             </div>
           </div>
 
-          {/* Certifications */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-2 sm:gap-4 lg:gap-6 body-text-small text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span>SEBI Registered</span>
-              <span className="hidden sm:inline">•</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span>ISO 27001 Certified</span>
-              <span className="hidden sm:inline">•</span>
-            </div>
-            <span>Bank Grade Security</span>
+          {/* Right Side - Developer Credit */}
+          <div className="flex items-center justify-center lg:justify-end gap-2 body-text-small text-muted-foreground mb-2 sm:mb-0">
+            {/* Mobile: Shorter version */}
+            <span className="block sm:hidden" style={{ marginLeft: '30px' }}>
+              Designed & dev with ❤ by
+            </span>
+
+            {/* Desktop: Full version */}
+            <span className="hidden sm:block">Designed & developed with</span>
+            <Heart className="w-4 h-4 text-red-500 fill-current hidden sm:block" />
+            <span className="hidden sm:block">by</span>
+            <a
+              href="https://developerakash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="developer-link-akash"
+              style={{
+                color: '#ea580c',
+                textDecoration: 'underline',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                textUnderlineOffset: '2px',
+                textDecorationThickness: '2px',
+                textDecorationColor: '#ea580c',
+                transition: 'all 0.3s ease',
+                display: 'inline-block',
+                position: 'relative',
+                zIndex: 9999,
+                pointerEvents: 'auto',
+                padding: '2px 4px',
+                borderRadius: '4px',
+                backgroundColor: 'rgba(234, 88, 12, 0.1)'
+              }}
+              onMouseEnter={(e) => {
+                const target = e.target as HTMLElement;
+                target.style.color = '#c2410c';
+                target.style.transform = 'scale(1.05)';
+                target.style.textDecorationColor = '#c2410c';
+                target.style.backgroundColor = 'rgba(196, 65, 12, 0.2)';
+                console.log('Hovering over Akash link');
+              }}
+              onMouseLeave={(e) => {
+                const target = e.target as HTMLElement;
+                target.style.color = '#ea580c';
+                target.style.transform = 'scale(1)';
+                target.style.textDecorationColor = '#ea580c';
+                target.style.backgroundColor = 'rgba(234, 88, 12, 0.1)';
+              }}
+              onClick={() => {
+                console.log('🔥 Akash link clicked! Opening https://developerakash.com');
+                alert('Akash link clicked! Opening portfolio website...');
+                // Don't prevent default, let the normal link behavior work
+              }}
+            >
+              Akash
+            </a>
           </div>
         </div>
       </div>

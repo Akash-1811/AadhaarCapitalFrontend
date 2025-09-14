@@ -34,6 +34,54 @@ button:focus {
   animation: slide-up 0.3s ease-out;
 }
 
+/* Developer link styling - ensure it works across all pages */
+.developer-link-akash,
+footer .developer-link-akash,
+a.developer-link-akash,
+footer a.developer-link-akash,
+a[href*="developerakash.com"] {
+  color: #ea580c !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  text-underline-offset: 2px !important;
+  text-decoration-thickness: 2px !important;
+  transition: all 0.3s ease !important;
+  display: inline !important;
+  text-decoration-color: #ea580c !important;
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+
+.developer-link-akash:hover,
+footer .developer-link-akash:hover,
+a.developer-link-akash:hover,
+footer a.developer-link-akash:hover,
+a[href*="developerakash.com"]:hover {
+  color: #c2410c !important;
+  transform: scale(1.05) !important;
+  text-decoration-color: #c2410c !important;
+}
+
+.developer-link-akash:visited,
+footer .developer-link-akash:visited,
+a.developer-link-akash:visited,
+footer a.developer-link-akash:visited,
+a[href*="developerakash.com"]:visited {
+  color: #ea580c !important;
+  text-decoration-color: #ea580c !important;
+}
+
+.developer-link-akash:active,
+footer .developer-link-akash:active,
+a.developer-link-akash:active,
+footer a.developer-link-akash:active,
+a[href*="developerakash.com"]:active {
+  color: #9a3412 !important;
+  text-decoration-color: #9a3412 !important;
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
