@@ -180,7 +180,7 @@ const Footer = () => {
               }}
               onClick={() => {
                 console.log('🔥 Akash link clicked! Opening https://developerakash.com');
-                alert('Akash link clicked! Opening portfolio website...');
+                // Remove alert for production
                 // Don't prevent default, let the normal link behavior work
               }}
             >
