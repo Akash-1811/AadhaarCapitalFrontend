@@ -167,59 +167,28 @@ const HeroSection = () => {
       // Debug: Log the data being sent
       console.log('Form data being sent:', formData);
 
-      // Try sending as JSON first (like Postman might be doing)
-      const dataToSend = {
-        ...formData,
-        subject: 'Homepage Hero Form Inquiry',
-        formType: 'Homepage Hero Form',
-        pageForm: 'Homepage Hero Section'
-      };
-
-      console.log('JSON data being sent:', dataToSend);
-
-      let response = await fetch('https://aadhar-capital-backend.vercel.app/submit-form/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToSend),
+      // Send as FormData (consistent with other working forms)
+      const formDataToSend = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataToSend.append(key, value);
       });
+      formDataToSend.append('subject', 'Homepage Hero Form Inquiry');
+      formDataToSend.append('formType', 'Homepage Hero Form');
+      formDataToSend.append('pageForm', 'Homepage Hero Section');
 
-      // If JSON fails, try FormData
-      if (!response.ok) {
-        console.log('JSON request failed, trying FormData...');
-
-        const formDataToSend = new FormData();
-        Object.entries(formData).forEach(([key, value]) => {
-          formDataToSend.append(key, value);
-        });
-        formDataToSend.append('subject', 'Homepage Hero Form Inquiry');
-        formDataToSend.append('formType', 'Homepage Hero Form');
-        formDataToSend.append('pageForm', 'Homepage Hero Section');
-
-        // Debug: Log FormData contents
-        console.log('FormData contents:');
-        for (let [key, value] of formDataToSend.entries()) {
-          console.log(key, value);
-        }
-
-        response = await fetch('https://aadhar-capital-backend.vercel.app/submit-form/', {
-          method: 'POST',
-          body: formDataToSend,
-        });
+      // Debug: Log FormData contents
+      console.log('FormData contents:');
+      for (let [key, value] of formDataToSend.entries()) {
+        console.log(key, value);
       }
 
-      // Debug: Log response details
-      console.log('Response status:', response.status);
-      console.log('Response headers:', response.headers);
-
-      const responseText = await response.text();
-      console.log('Response body:', responseText);
+      const response = await fetch('https://aadhar-capital-backend.vercel.app/submit-form/', {
+        method: 'POST',
+        body: formDataToSend,
+      });
 
       if (response.ok) {
-        const responseData = JSON.parse(responseText);
-        console.log('Success response:', responseData);
-
+        // Show success toast
         toast.success("Thank You for Enquiring! Our Team Representative will get back to you soon.", {
           duration: 5000,
         });
@@ -232,8 +201,7 @@ const HeroSection = () => {
           mobile: ""
         });
       } else {
-        console.error('Error response:', responseText);
-        throw new Error(`Failed to submit form: ${response.status} - ${responseText}`);
+        throw new Error('Failed to submit form');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
